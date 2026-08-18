@@ -23,7 +23,37 @@
                 <li>Aguarde nosso contato telefônico, ou por e-mail, para confirmação da reserva.</li>
                 <li>Efetue a transferência do valor da reserva.</li>
                 <li>Envie o comprovante de transferência para o e-mail <u style="color: blue">atendimento@pousadaserraverde.tur.br</u></li>
-            </ol>
+            </ol><br>
+            <form action="reserva.php" method="post">
+                <div>
+                    <fieldset>
+                        <legend>Solicitação de Reservas</legend>
+                        <div>
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome">
+                        </div><br>
+
+                        <div>
+                        <label for="idade">Idade:</label>
+                        <input type="range" id="idade" min="0" max="100" value="18" 
+                               oninput="display.value = value + ' ano(s)'" 
+                               onchange="display.value = value + ' ano(s)'">
+                        <input type="text" id="display" value="18 ano(s)" readonly 
+                               style="border: none; background: transparent; outline: none; width: 70px;">
+                        </div><br>
+                        <div>
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="99 99999-9999">
+                        </div><br>
+                        
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        
+                    </fieldset>
+                </div>
+            </form>
         </article>
     </section>
 </body>
