@@ -3,15 +3,18 @@
 <head>
     <title>Pousada Serra Verde</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <section>
-       <header><h1>Pousada Serra Verde</h1></header>
-       <a href="../home.html" target="_self">Home</a> &nbsp;&nbsp;
-        <a href="/pages/aPousada.html" target="_self">A Pousada</a>&nbsp;&nbsp;
-        <a href="/pages/reservas.html" target="_self">Reservas</a>&nbsp;&nbsp;
-        <a href="/pages/tarifas.html" target="_self">Tarifas</a>&nbsp;&nbsp;
-        <a href="/pages/comoChegar.html" target="_self">Como Chegar</a>
+       <header class="topo"><h1>Pousada Serra Verde</h1></header>
+        <nav class="menu">
+            <a href="../home.html" target="_self">Home</a>
+            <a href="/pages/aPousada.html" target="_self">A Pousada</a>
+            <a href="/pages/reservas.html" target="_self" class="active">Reservas</a>
+            <a href="/pages/tarifas.html" target="_self">Tarifas</a>
+            <a href="/pages/comoChegar.html" target="_self">Como Chegar</a>
+        </nav>
         <hr>
         <article>
             <header><h2><strong>Reservas<br></strong></h2></header>
@@ -49,11 +52,68 @@
                         <div>
                             <label for="email">E-mail</label>
                             <input type="text" id="email" name="email">
-                        </div>
-                        
+                        </div><br>
+
+                        <div>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade">
+                            <label for="uf">UF</label>
+                            <input type="text" id="uf" name="uf" maxlength="2" size="2">
+                        </div><br>
+
+                        <fieldset class="grupo-chale">
+                            <legend>Chalé</legend>
+                            <label><input type="radio" name="chale" value="economico" checked> Econômico</label>
+                            <label><input type="radio" name="chale" value="standard"> Standard</label>
+                            <label><input type="radio" name="chale" value="luxo"> Luxo</label>
+                            <label><input type="radio" name="chale" value="familia"> Família</label>
+                        </fieldset><br>
+
+                        <div>
+                            <label for="chegada">Chegada</label>
+                            <input type="date" id="chegada" name="chegada">
+                        </div><br>
+
+                        <div>
+                            <label for="partida">Partida</label>
+                            <input type="date" id="partida" name="partida">
+                        </div><br>
+
+                        <div>
+                            <label for="adultos">Adultos</label>
+                            <input type="number" id="adultos" name="adultos" min="1" value="2">
+                            <label for="criancas">Até 5 anos</label>
+                            <input type="number" id="criancas" name="criancas" min="0" value="0">
+                        </div><br>
+
+                        <div>
+                            <label for="estacionamento">
+                                <input type="checkbox" id="estacionamento" name="estacionamento">
+                                Quero reservar uma vaga no estacionamento.
+                            </label>
+                        </div><br>
+
+                        <div>
+                            <label for="pagamento">Forma de Pagamento</label>
+                            <select id="pagamento" name="pagamento">
+                                <option value="transferencia">Transferência (TED/DOC)</option>
+                                <option value="cartao">Cartão de Crédito</option>
+                                <option value="pix">Pix</option>
+                                <option value="boleto">Boleto Bancário</option>
+                            </select>
+                        </div><br>
+
+                        <div>
+                            <label for="pedido">Se desejar, faça um pedido especial, faremos o possível para atendê-lo:</label><br>
+                            <textarea id="pedido" name="pedido" rows="4"></textarea>
+                        </div><br>
+
+                        <input type="submit" value="Solicitar Reserva">
+
                     </fieldset>
                 </div>
             </form>
+            <p class="rodape">Desenvolvido por Tech Hotelaria</p>
         </article>
     </section>
 </body>

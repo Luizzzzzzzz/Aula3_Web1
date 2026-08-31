@@ -3,21 +3,21 @@
 <head>
     <title>Pousada Serra Verde</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <section>
-       <header><h1>Pousada Serra Verde</h1></header>
-       <a href="../home.html" target="_self">Home</a> &nbsp;&nbsp;
-        <a href="/pages/aPousada.html" target="_self">A Pousada</a>&nbsp;&nbsp;
-        <a href="/pages/reservas.html" target="_self">Reservas</a>&nbsp;&nbsp;
-        <a href="/pages/tarifas.html" target="_self">Tarifas</a>&nbsp;&nbsp;
-        <a href="/pages/comoChegar.html" target="_self">Como Chegar</a>
+       <header class="topo"><h1>Pousada Serra Verde</h1></header>
+        <nav class="menu">
+            <a href="../home.html" target="_self">Home</a>
+            <a href="/pages/aPousada.html" target="_self">A Pousada</a>
+            <a href="/pages/reservas.html" target="_self">Reservas</a>
+            <a href="/pages/tarifas.html" target="_self" class="active">Tarifas</a>
+            <a href="/pages/comoChegar.html" target="_self">Como Chegar</a>
+        </nav>
         <hr>
         <article>
             <header><h2><strong>Tarifas<br></strong></h2></header>
-            <style>
-                table, td, th {border: 1px solid black;}
-            </style>
             <table>
                 <caption>*Diária por pessoa (preços não válidos para feriados e alta temporada)</caption>
                <thead>
@@ -51,6 +51,7 @@
                </tbody>
                
             </table>
+            <p class="rodape">Desenvolvido por Tech Hotelaria</p>
         </article>
     </section>
 </body>
